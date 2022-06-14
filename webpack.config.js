@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const ESLintPlugin = require("eslint-webpack-plugin");
+const WebpackPrettierPlugin = require("webpack-prettier-plugin");
 
 module.exports = {
   entry: "/src/index.tsx",
@@ -37,5 +38,6 @@ module.exports = {
       template: "./public/index.html",
     }),
     new ESLintPlugin(),
+    new WebpackPrettierPlugin(),
   ],
 };
